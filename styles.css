@@ -1,0 +1,10 @@
+body {
+    font-family: "Courier New", Courier, monospace;
+}
+
+.darktext {
+    background-color: rgb(51, 35, 67);
+    color: aliceblue;
+    padding: 1em;
+    width: 50%;
+}
