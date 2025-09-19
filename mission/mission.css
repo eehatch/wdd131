@@ -1,0 +1,38 @@
+/* 
+
+The image for the logo is larger than we need. You can use 150px for the size. */
+
+.content {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 600px;
+    line-height: 1.5;
+    margin: auto;
+    padding: 0%;
+}
+h2{
+    color: #006EB6
+}
+.title {
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.2em;
+}
+.logo {
+    /* not correct haha */
+    max-width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.does-list {
+    /* add space between list items */
+}
+.dark {
+    background-color: #333;
+    color: white;
+}
+.dark h2 {
+    color: #a9ddff;
+}
