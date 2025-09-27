@@ -98,10 +98,8 @@ a:visited {
     z-index: 1001;
 }
 
-
-
 @media screen and (max-width: 700px){
-    .hidden{
+    #menuItems.hidden{
         display: none;
     }
     #menuItems{
@@ -116,7 +114,6 @@ a:visited {
         padding: 0; 
     }   
 }
-
 @media screen and (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
