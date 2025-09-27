@@ -10,6 +10,7 @@
 }
 header, main, footer {
     padding: 0.1rem;
+    max-width: 100%;
 }
 html, body{
     margin: 0;
