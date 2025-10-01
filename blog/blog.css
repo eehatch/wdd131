@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+/* Gold color: #EFC69B
+Red color: #AF1B3F
+Dark color: #473144
+Body font: Helvetica, Arial, sans-serif */
+
+h2{
+    font-family: 'Lora', serif;
+    color: #AF1B3F;
+}
