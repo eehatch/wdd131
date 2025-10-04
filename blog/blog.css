@@ -1,11 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+:root {
+    --gold-color: #EFC69B;
+    --red-color: #AF1B3F;
+    --dark-color: #473144;
+    --body-font: Helvetica, Arial, sans-serif;
+    --headline-font: Lora, serif;
+}
+main{
+    font-family: var(--body-font);
+    color: var(--dark-color);
+    display: grid;
+    grid-template-columns:3fr 1fr;
+    margin: 0 auto;
+    padding: 0 1em;
+    line-height: 1.6;
+    gap: 20px;
+}
+#menuItems{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style-type: none;
+    justify-content: end;
+    border-top: 1px solid var(--gold-color); 
+    border-bottom: 1px solid var(--gold-color);
+    padding: 1em;
+    /* max-width: 100%; */
+    font-size: 1.2em;
+    gap: 1em;
+}
+a:link,
+a:visited {
+    color: var(--red-color);
+    font-family: var(--body-font);
+    text-decoration: none;
 
-/* Gold color: #EFC69B
-Red color: #AF1B3F
-Dark color: #473144
-Body font: Helvetica, Arial, sans-serif */
-
+}
+h1{
+    font-family: var(--headline-font);
+    font-size: 2em;
+    text-align: center;
+}
 h2{
-    font-family: 'Lora', serif;
+    font-family: var(--headline-font);
     color: #AF1B3F;
 }
+
+.review{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin: 0;
+    padding: 0;
+    gap: 1em;;
+    align-items: start; 
+}
+.review-details{
+    text-align: right;
+    padding: 0 1em;
+    line-height: 0.5em;
+    align-items: start; 
+}
+.review-details .date{
+    font-size: 1.2em;
+}
+.review-content{
+    max-width: 100%;
+    margin: 0;
+    align-items: start;
+    border-left: 1px solid var(--gold-color); 
+    padding-left: 1em;
+}
+.review-content img{
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+    height: auto;
+}
+#articles-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.filter{
+    max-width: 100%;
+    border: 1px solid var(--gold-color);
+}
+
+.skiptocontent a {
+	/* set the element to absolute positioning */
+    position: absolute;
+	/* move it off screen */
+    left: -9999px;
+	/* Make sure it will be on the left edge of the screen */
+    background-color: var(--red-color);
+    color: white;
+
+}
+.skiptocontent a:focus {
+	/* Move it back on when focused */
+    left: 10px;
+    top: 10px;
+    width: auto;
+    overflow: visible;
+    padding: 0.5em;
+}
+

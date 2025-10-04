@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
     <meta name="description" content="Blog Page">
     <meta name="author" content="Emily Hatch">
     <link rel="stylesheet" href="blog.css">
     <script src="blog.js" defer></script>
+    <title>My Blog</title>
 </head>
 <body>
     <header>
         <h1>Kids Read for Fun</h1>
+        <div class="skiptocontent">
+            <a href="#maincontent">skip to main content</a>
+        </div>
         <nav>
             <ul id="menuItems">
                 <li><a href="#">About</a></li>
@@ -21,23 +24,10 @@
         </nav>
     </header>
     <main>
-        <section class="book1">
-            <h2>Septimus Heap Book One: Magyk</h2>
-            <img src="book1.jpg" alt="Book 1 Cover" class="book-cover">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto beatae corporis, at consequuntur aperiam, quos, sunt aut ut quis provident repellendus accusamus nostrum eaque totam eum. Nihil?</p>
-            <section class="info">
-                <h3>Date</h3>
-                <p>age</p>
-                <p>Genre</p>
-                <p>rating</p>
-            </section>
-        </section>
+        <div id="articles-container"></div>
         <section class="filter">
             <p>Filter form will go here</p>
-        </section>"
-        
-        
-       
+        </section>
     </main>
 </body>
 </html>
