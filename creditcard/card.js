@@ -15,9 +15,11 @@ function submitHandler(event) {
 
     let month = parseInt(this.querySelector('#card-month').value)
     let year = parseInt(this.querySelector('#card-year').value)
-    const expired = new Date(year, month)
+    year = year < 100 ? 2000 + year : year;
+    const expired = new Date(year,month -1)
     const today = new Date()
 
+    displayError('')
     if (isNaN(month) || isNaN(year)) {
         errorMsg += 'Expiration date is invalid\n'
     } else if (expired <= today) {

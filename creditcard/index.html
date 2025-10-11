@@ -26,16 +26,16 @@
             </div>
             <div>
                 <label for="cardNumber" id="number">Card Number</label>
-                <input type="text" id="cardNumber" name="creditCard" pattern="[0-9]{16}"/>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="[0-9]{16}" required/>
             </div>
             <div>
                 <label for="cardHolder" id="holder">Card Holder</label>
-                <label for="card-exp" id="expire">Expiration</label>
+                <label for="card-month" for="card-year" id="expire">Expiration</label>
             </div>
             <div>
-                <input id="cardHolder" type="text" name="cardHolder"/>
-                <input id="card-month" type="text" placeholder="MM">
-                <input id="card-year" type="text" placeholder="YY">
+                <input id="cardHolder" type="text" name="cardHolder" required>
+                <input id="card-month" type="text" placeholder="MM" required>
+                <input id="card-year" type="text" placeholder="YY" required>
             </div>
         </section>
         <section class="back">
@@ -43,10 +43,10 @@
             </div>
             <div class="cvc">
                 <label for="cvv" id="cvc-label">CVC/CVV</label>
-                <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}"/>
+                <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
             </div>       
         </section>    
-        <button type ="button">Submit</button>
+        <button type ="submit">Submit</button>
     </form>   
 </body>
 </html>
