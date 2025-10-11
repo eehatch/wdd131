@@ -1,0 +1,101 @@
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* position: relative; */
+    text-transform: uppercase;
+    padding: 20px 0;
+    color: rgb(112, 112, 112)
+
+}
+.image-container{
+    font-size: 10px;
+    /* margin: 8px; */
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+
+}
+.spacing{
+    font-size: 40px;
+}
+.credit-card{
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px; 
+    grid-template-rows: 35px 140px 35px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.front{
+    background-color: lightgrey;
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    padding: 10px;
+}
+.back{
+    background-color: lightgrey;
+    grid-column: 2 / 5;
+    grid-row: 2 / 4;
+    z-index: 1;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+.cvc{
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+#cvc-label{
+    font-size: 12px;
+}
+#cvv{
+    width: 20%;
+}
+button{
+    font-size: 12px;
+    grid-row: 4/5;
+    grid-column: 4/5;
+    margin: 10px;
+    z-index: 2;
+}
+.card-stripe {
+    /* position: absolute; */
+    height: 30px;
+    background-color: #000000;
+    margin-top: 15px;
+}
+.card-image {
+    height: 40px;
+    margin: 10px;
+    float: right;
+}
+#number{
+    margin-left: 10px;
+}
+#cardNumber {
+    width: 90%;
+    margin-left: 10px;
+}
+#holder{
+    margin-left: 10px;
+}
+#expire{
+    margin-left: 60px;}
+#cardHolder {
+    width: 50%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#card-month, #card-year {
+    width: 10%;
+}
+input{
+    margin-bottom: 12px;
+}

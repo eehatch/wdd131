@@ -18,13 +18,25 @@ const aCourse = {
         instructor: 'Sis A'
     }
 ],
-  enrollStudent: function(sectionNum){
-    console.log("in enrollStudents", this);
-    const section = this.sections.find(
-        (section) => section.sectionNum === sectionNum
+  enrollStudent: function (sectionNum) {
+    // find the right section...Array.findIndex will work here
+    const sectionIndex = this.sections.findIndex(
+      (section) => section.sectionNum == sectionNum
     );
-    console.log(section);
-  }
+    if (sectionIndex >= 0) {
+      this.sections[sectionIndex].enrolled++;
+      renderSections(this.sections);
+    }
+  },
+    dropStudent: function(sectionNum){
+        const sectionIndex = this.sections.findIndex(
+      (section) => section.sectionNum == sectionNum
+    );
+    if (sectionIndex >= 0) {
+      this.sections[sectionIndex].enrolled--;
+      renderSections(this.sections);
+    }
+  },
 };
 
 // different ways to do the same thing
@@ -36,38 +48,33 @@ const aCourse = {
 // the room of the first section
 // acourse.sections[0].roomNum
 
-function setCourseInfo(course){
-    const nameEl = document.querySelector("#courseName");
-    const courseCode = document.querySelector("#courseCode");
-    nameEl.textContent = course.name;
-    courseCode.textContent = course.code;
+function setCourseInfo(course) {
+  const courseName = document.querySelector("#courseName");
+  const coursecode = document.querySelector("#courseCode");
+  courseName.textContent = course.name;
+  coursecode.textContent = course.code;
 }
-function sectionTemplate(section){
-    return `<tr>
+
+function renderSections(sections) {
+  const html = sections.map(
+    (section) => `<tr>
     <td>${section.sectionNum}</td>
     <td>${section.roomNum}</td>
     <td>${section.enrolled}</td>
     <td>${section.days}</td>
-    <td>${section.instructor}</td>
-    </tr>`
+    <td>${section.instructor}</td></tr>`
+  );
+  document.querySelector("#sections").innerHTML = html.join("");
 }
-function printSections(sections){
-    //get a reference to the sections element
-    const sectionsEl = document.querySelector("#sections");
-    // transform each section from an object into an HTML string
-    const htmlStrings = sections.map(sectionTemplate);
-    // insert the html strings into the sections element
-    sectionsEl.innerHTML = htmlStrings.join("");
 
-}
-    setCourseInfo(aCourse);
-    printSections(aCourse.sections);
+document.querySelector("#enrollStudent").addEventListener("click", function () {
+  const sectionNum = document.querySelector("#sectionNumber").value;
+  aCourse.enrollStudent(sectionNum);
+});
+document.querySelector("#dropStudent").addEventListener("click", function () {
+  const sectionNum = document.querySelector("#sectionNumber").value;
+  aCourse.dropStudent(sectionNum);
+});
 
-    function clickHandler(event){
-        //get the section number from the input
-        console.lot("in clickHandler", this);
-        //call the enrollStudent function with that section number
-        aCourse.enrollStudent(2);
-    }
-    document.querySelector("#enrollStudent").addEventListener("click", clickHandler);
-    aCourse.enrollStudent(2);
+setCourseInfo(aCourse);
+renderSections(aCourse.sections);
