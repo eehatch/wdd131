@@ -1,1 +1,17 @@
- 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+ :root {
+     --primary-color: #1b56e0;
+    --secondary-color: #8aa0f3;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --body-font: Helvetica, Arial, sans-serif;
+    --headline-font: "Shadows Into Light", cursive;
+}
+
+img {
+	max-width: 100%;
+}
+
+header{
+    display: flex;
+}

@@ -279,3 +279,7 @@ const recipes = [
 		rating: 4
 	}
 ]
+
+
+ const container = document.getElementById("recipes-container");
+ container.innerHTML = recipes.map(reviewTemplate).join('');
