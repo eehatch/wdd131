@@ -1,17 +1,121 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
  :root {
-     --primary-color: #1b56e0;
+    --primary-color: #1b56e0;
     --secondary-color: #8aa0f3;
     --text-dark: #333;
     --text-light: #ebebeb;
     --body-font: Helvetica, Arial, sans-serif;
     --headline-font: "Shadows Into Light", cursive;
 }
-
-img {
-	max-width: 100%;
+* {
+    box-sizing: border-box;
 }
-
+main {
+    padding: 1em;
+    width: 100%;
+}
+.logo {
+    width: 100px;
+    height: auto;
+    max-width: 100%;
+}
 header{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--headline-font);
+    font-size: 1.5em;
+    max-width: 100%;
+    padding: 1em;
+}
+header h1{
+    margin: 0;
+    margin-top: 50px;
+    align-self: end;
+}
+.search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em;
+}
+.search input{
+    flex: 1;
+    padding: 0.25em;
+    font-size: 1em;
+}
+.search img{
+    width: 24px;
+    height: auto;
+    border: 1px solid black;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    max-width: 100%;
+}
+.social{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;    /* height: auto; */
+}
+#recipes-container{
+    gap: 1.5em;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.recipe-card {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 3em;
+    border: 1px solid black;
+    max-width: 100%;
+    border-radius: 5px;
+    padding: 2em;
+}
+.recipe-card h2 {
+  font-family: var(--headline-font);
+  color: var(--primary-color);
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+.tag {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 0.75em;
+  padding: 0.4em;
+  margin: .5em;
+  border-radius: 5px;
+  margin-right: 0.4em;
+}
+.rating {
+  font-size: 1.1em;
+  color: gold;
+}
+@media screen and (min-width: 700px) {
+  .recipe-card {
+    flex-direction: row;
+    align-items: stretch;
+    height: 200px;
+  }
+
+  .recipe-card img {
+    width: 250px;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .card-content {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }

@@ -280,6 +280,32 @@ const recipes = [
 	}
 ]
 
+function reviewTemplate(recipe) {
+  const tagsHTML = recipe.tags.map(tag => `<span class="tag">${tag}</span>`).join(' ');
+  
+  return `
+    <div class="recipe-card">
+      <img src="${recipe.image}" alt="${recipe.name}">
+      <div class="card-content">
+        <div class="tags">${tagsHTML}</div>
+        <h2>${recipe.name}</h2>
+        <p class="rating">${renderStars(recipe.rating)}</p>
+      </div>
+    </div>
+  `;
+}
+
+
+function renderStars(rating) {
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+  return (
+    '⭐'.repeat(fullStars) +
+    (halfStar ? '½' : '') +
+    '☆'.repeat(emptyStars)
+  );
+}
 
  const container = document.getElementById("recipes-container");
  container.innerHTML = recipes.map(reviewTemplate).join('');

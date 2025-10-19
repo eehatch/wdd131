@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Book</title>
+    <title>Recipe Book</title>        
+    <meta name = "author" content ="Emily Hatch">
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>RecipeBook</h1>
-        <img src="images/recipe-book.png" alt="book logo">
+        <img class="logo" src="images/recipe-book.png" alt="book logo">
+        <h1>RECIPEBOOK</h1>
     </header>
     <main>
         <section class="search">
-            <p>PUT SEARCH BAR HERE</p>
+            <input type="text" id="search-bar" placeholder="Find a recipe">
+            <img class="glass" src="images/search-interface-symbol.png" alt="magnifying glass">
         </section>
-        <section class="rating">
+        <section class="recipe">
+            <div id="recipes-container"></div>
             <span
                 class="rating"
                 role="img"
@@ -26,17 +31,15 @@
                 <span aria-hidden="true" class="icon-star-empty">☆</span>
             </span>
         </section>
-        <div id="recipes-container"></div>
     </main>
     <footer>
-        <p>&copy;2025</p>
         <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
-        <!-- <div class="social">
-             Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  
+        <div class="social">
+             <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates   -->
             <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
             <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
             <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
-        </div>  -->
+        </div> 
     </footer>   
 </body>
 </html>
