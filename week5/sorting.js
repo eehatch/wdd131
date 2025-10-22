@@ -106,3 +106,13 @@ function searchList(list, q){
 }
 
 console.log(searchList(hikes, "al"))
+
+// localStorage.setItem("name", "Sis H")
+
+function setLocalStorage(key, value){
+  localStorage.setItem(key, JSON.stringify(value));
+}
+function getLocalStorage(key){
+  const value = localStorage.getItem(key);
+  return JSON.parse(value);
+}
