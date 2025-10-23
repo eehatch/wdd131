@@ -24,9 +24,12 @@
         </nav>
     </header>
     <main>
-        <section class="filter">
-            <p>FILTER GO HERE</p>
-        </section>
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('UK')"> UK </button>
+            <button class="btn" onclick="filterSelection('Grand Canyon')"> Grand Canyon</button>
+            <button class="btn" onclick="filterSelection('D.C. & Florida')"> D.C. & Florida</button>
+            </div>
         <section class="blog">
             <div id="posts-container"></div>
         </section>
